@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="hero-glow-1" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#8B5CF6" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#080B12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-glow-2" cx="75%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#55E6D1" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#55E6D1" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#080B12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-core-glow" cx="70%" cy="50%" r="28%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#55E6D1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#080B12" stop-opacity="0"/>
+    </radialGradient>
+    
+    <pattern id="cyber-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(167, 139, 250, 0.05)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1" fill="rgba(85, 230, 209, 0.25)"/>
+    </pattern>
+    
+    <pattern id="cyber-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="rgba(241, 245, 249, 0.04)"/>
+    </pattern>
+
+    <linearGradient id="trace-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#A78BFA" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#55E6D1" stop-opacity="0"/>
+    </linearGradient>
+    
+    <linearGradient id="trace-grad-2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#55E6D1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#55E6D1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Midnight Base -->
+  <rect width="1440" height="900" fill="#080B12"/>
+
+  <!-- Radial Cyber Glows -->
+  <rect width="1440" height="900" fill="url(#hero-glow-1)"/>
+  <rect width="1440" height="900" fill="url(#hero-glow-2)"/>
+  <rect width="1440" height="900" fill="url(#hero-core-glow)"/>
+
+  <!-- Subtle Matrix Grids -->
+  <rect width="1440" height="900" fill="url(#cyber-grid)"/>
+  <rect width="1440" height="900" fill="url(#cyber-dots)"/>
+
+  <!-- Circuit traces and technical accents -->
+  <g stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
+    <path d="M 120 180 L 320 180 L 380 240 L 520 240" fill="none" stroke="url(#trace-grad-1)" stroke-width="1.5"/>
+    <circle cx="120" cy="180" r="3" fill="#A78BFA" opacity="0.6"/>
+    <circle cx="520" cy="240" r="3" fill="#55E6D1" opacity="0.6"/>
+
+    <path d="M 800 120 L 960 120 L 1020 180 L 1320 180" fill="none" stroke="url(#trace-grad-1)" stroke-width="1.5"/>
+    <circle cx="800" cy="120" r="2.5" fill="#55E6D1" opacity="0.5"/>
+    <circle cx="1320" cy="180" r="3" fill="#A78BFA" opacity="0.6"/>
+
+    <path d="M 950 750 L 1080 750 L 1140 690 L 1350 690" fill="none" stroke="url(#trace-grad-1)" stroke-width="1.5"/>
+    <circle cx="950" cy="750" r="2.5" fill="#A78BFA" opacity="0.4"/>
+
+    <path d="M 100 700 L 250 700 L 310 760 L 450 760" fill="none" stroke="url(#trace-grad-1)" stroke-width="1.5"/>
+    <circle cx="450" cy="760" r="2.5" fill="#55E6D1" opacity="0.4"/>
+  </g>
+
+  <!-- High-tech HUD Rings in Robot Area (Right Center) -->
+  <g transform="translate(1020, 420)" opacity="0.35">
+    <circle cx="0" cy="0" r="280" fill="none" stroke="#A78BFA" stroke-width="1" stroke-dasharray="8 12"/>
+    <circle cx="0" cy="0" r="230" fill="none" stroke="#55E6D1" stroke-width="1" stroke-dasharray="4 8"/>
+    <circle cx="0" cy="0" r="170" fill="none" stroke="rgba(241, 245, 249, 0.15)" stroke-width="0.75"/>
+    <circle cx="0" cy="0" r="320" fill="none" stroke="rgba(167, 139, 250, 0.1)" stroke-width="1" stroke-dasharray="24 36"/>
+    
+    <!-- Crosshairs & Coordinate ticks -->
+    <line x1="-300" y1="0" x2="-260" y2="0" stroke="#55E6D1" stroke-width="1.5"/>
+    <line x1="260" y1="0" x2="300" y2="0" stroke="#55E6D1" stroke-width="1.5"/>
+    <line x1="0" y1="-300" x2="0" y2="-260" stroke="#A78BFA" stroke-width="1.5"/>
+    <line x1="0" y1="260" x2="0" y2="300" stroke="#A78BFA" stroke-width="1.5"/>
+  </g>
+
+  <!-- Technical Telemetry Data Annotations -->
+  <g font-family="monospace" font-size="10" fill="rgba(148, 163, 184, 0.3)" letter-spacing="2">
+    <text x="60" y="860">SYS_COORDS // [LAT: 12.87° N, LNG: 74.88° E] :: SYS_KERNEL: ONLINE</text>
+    <text x="1180" y="860">R4X_STATUS // 100% OK</text>
+    <text x="1000" y="80">R4X_NEURAL_INTERFACE_READY // [VER 2.4.0]</text>
+  </g>
+</svg>
