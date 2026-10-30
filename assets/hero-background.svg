@@ -74,7 +74,7 @@
     <circle cx="0" cy="0" r="170" fill="none" stroke="rgba(241, 245, 249, 0.15)" stroke-width="0.75"/>
     <circle cx="0" cy="0" r="320" fill="none" stroke="rgba(167, 139, 250, 0.1)" stroke-width="1" stroke-dasharray="24 36"/>
     
-    <!-- Crosshairs & Coordinate ticks -->
+    <!-- Crosshairs &amp; Coordinate ticks -->
     <line x1="-300" y1="0" x2="-260" y2="0" stroke="#55E6D1" stroke-width="1.5"/>
     <line x1="260" y1="0" x2="300" y2="0" stroke="#55E6D1" stroke-width="1.5"/>
     <line x1="0" y1="-300" x2="0" y2="-260" stroke="#A78BFA" stroke-width="1.5"/>

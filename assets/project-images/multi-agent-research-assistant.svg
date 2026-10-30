@@ -61,7 +61,7 @@
     <circle cx="0" cy="0" r="26" fill="#172554" stroke="#60A5FA" stroke-width="2"/>
     <circle cx="0" cy="0" r="10" fill="#60A5FA"/>
     <text x="0" y="40" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#F1F5F9" text-anchor="middle">ANALYZER AGENT</text>
-    <text x="0" y="51" font-family="sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Fact Checking & Filter</text>
+    <text x="0" y="51" font-family="sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Fact Checking &amp; Filter</text>
   </g>
 
   <!-- Bottom Node: Synthesis / Report Writer -->

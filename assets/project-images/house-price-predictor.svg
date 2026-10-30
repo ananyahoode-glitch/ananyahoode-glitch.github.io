@@ -32,7 +32,7 @@
   <circle cx="454" cy="39" r="4" fill="#55E6D1" filter="url(#hpp-glow)"/>
   <text x="466" y="43" font-family="sans-serif" font-size="10" fill="#55E6D1">R² SCORE: 0.92</text>
 
-  <!-- Left Side: Architectural Wireframe & Inputs -->
+  <!-- Left Side: Architectural Wireframe &amp; Inputs -->
   <rect x="20" y="74" width="220" height="286" rx="10" fill="url(#hpp-panel)" stroke="#273552" stroke-width="1"/>
   <text x="36" y="100" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#A78BFA">PARAMETRIC INFERENCE</text>
 
@@ -46,7 +46,7 @@
     <line x1="0" y1="15" x2="0" y2="75"/>
     <line x1="-55" y1="45" x2="0" y2="75"/>
     <line x1="0" y1="75" x2="55" y2="45"/>
-    <!-- Door & Windows -->
+    <!-- Door &amp; Windows -->
     <rect x="-15" y="40" width="30" height="30" stroke="#A78BFA" stroke-width="1" fill="none"/>
     <circle cx="0" cy="55" r="2" fill="#55E6D1"/>
   </g>
@@ -59,7 +59,7 @@
     <text x="36" y="338" fill="#55E6D1" font-weight="600">PREDICTED: $485,000</text>
   </g>
 
-  <!-- Right Side: Regression Curve & Data Analysis -->
+  <!-- Right Side: Regression Curve &amp; Data Analysis -->
   <rect x="255" y="74" width="325" height="286" rx="10" fill="url(#hpp-panel)" stroke="#273552" stroke-width="1"/>
   <text x="275" y="100" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#55E6D1">VALUATION TRENDLINE vs ACTUAL (TEST SET)</text>
 
