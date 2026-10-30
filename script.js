@@ -114,25 +114,38 @@
   const copyBtnLabel = document.getElementById('copy-btn-label');
   const emailAddress = document.getElementById('email-address');
 
+  // Cute Cyber Blush Elements
+  const robotBlushLeft = document.getElementById('r4x-blush-left-el');
+  const robotBlushRight = document.getElementById('r4x-blush-right-el');
+
   // Check reduced motion preference
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // --- 3. Robotic Voice & Mouth Waveform Animation ---
+  // --- 3. Cute Female Robotic Voice & Mouth Waveform Animation ---
   let talkingInterval = null;
 
   function startMouthTalking() {
     if (talkingInterval || !robotMouthCurve) return;
     let tick = 0;
+
+    // Glowing pink cute cheeks while talking!
+    if (robotBlushLeft && robotBlushRight) {
+      robotBlushLeft.style.opacity = '1';
+      robotBlushRight.style.opacity = '1';
+      robotBlushLeft.setAttribute('stroke', '#F472B6');
+      robotBlushRight.setAttribute('stroke', '#F472B6');
+    }
+
     talkingInterval = setInterval(() => {
       tick++;
-      // Animated mouth curve simulating speech syllables
-      const depths = [18, 6, 22, 4, 16, 8, 20, 2];
+      // Animated expressive mouth curve simulating cheerful speech
+      const depths = [16, 8, 20, 6, 14, 10, 18, 4];
       const depth = depths[tick % depths.length];
       robotMouthCurve.setAttribute('d', `M-22 0 Q0 ${depth} 22 0`);
       if (robotReactorCore) {
         robotReactorCore.style.opacity = tick % 2 === 0 ? '1' : '0.65';
       }
-    }, 100);
+    }, 95);
   }
 
   function stopMouthTalking() {
@@ -145,6 +158,12 @@
     }
     if (robotReactorCore) {
       robotReactorCore.style.opacity = '1';
+    }
+    if (robotBlushLeft && robotBlushRight) {
+      robotBlushLeft.style.opacity = '0.7';
+      robotBlushRight.style.opacity = '0.7';
+      robotBlushLeft.setAttribute('stroke', '#A78BFA');
+      robotBlushRight.setAttribute('stroke', '#A78BFA');
     }
   }
 
@@ -160,32 +179,64 @@
     window.speechSynthesis.onvoiceschanged = populateVoices;
   }
 
-  // Speak aloud with realistic robotic cadence
+  // Cute female voice selection algorithm
+  function getCuteFemaleVoice() {
+    if (!('speechSynthesis' in window)) return null;
+    if (availableVoices.length === 0) {
+      availableVoices = window.speechSynthesis.getVoices();
+    }
+    if (!availableVoices || availableVoices.length === 0) return null;
+
+    const femaleKeywords = [
+      'zira', 'jenny', 'aria', 'samantha', 'victoria', 
+      'karen', 'moira', 'tessa', 'female', 'woman', 
+      'girl', 'catherine', 'hazel', 'susan', 'helena'
+    ];
+
+    // 1. Prioritize English female voice by recognizable name keywords
+    let voice = availableVoices.find(v => {
+      const name = v.name.toLowerCase();
+      const lang = v.lang.toLowerCase();
+      const isEnglish = lang.startsWith('en');
+      const isFemale = femaleKeywords.some(k => name.includes(k));
+      const isNotMale = !name.includes('david') && !name.includes('george') && !name.includes('mark') && !name.includes('guy') && !name.includes('male');
+      return isEnglish && isFemale && isNotMale;
+    });
+
+    // 2. Fallback to any English voice not explicitly male
+    if (!voice) {
+      voice = availableVoices.find(v => {
+        const name = v.name.toLowerCase();
+        return v.lang.toLowerCase().startsWith('en') && 
+               !name.includes('david') && !name.includes('george') && !name.includes('mark') && !name.includes('male');
+      });
+    }
+
+    return voice || availableVoices[0];
+  }
+
+  // Speak aloud with cute, bright, friendly AI companion voice
   function speakVoice(text) {
     if (!audioEnabled || !('speechSynthesis' in window)) return;
     try {
       window.speechSynthesis.cancel();
 
-      // Clean emojis and symbols for natural vocal speech
+      // Clean emojis and symbols for smooth vocal delivery
       const cleanText = text
         .replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '')
         .replace(/[#*_`]/g, '')
         .trim();
 
       const utterance = new SpeechSynthesisUtterance(cleanText);
-      utterance.pitch = 1.15; // Slightly robotic pitch
-      utterance.rate = 1.05;  // Crisp cyber tempo
+      
+      // Cute, bright feminine voice parameters
+      utterance.pitch = 1.38; // Sweet, bright, youthful cute pitch
+      utterance.rate = 1.08;  // Cheerful, upbeat conversation speed
+      utterance.volume = 1.0;
 
-      // Pick an English voice
-      if (availableVoices.length === 0) {
-        availableVoices = window.speechSynthesis.getVoices();
-      }
-      if (availableVoices && availableVoices.length > 0) {
-        const preferred = availableVoices.find(v => 
-          v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Zira') || v.name.includes('David'))
-        ) || availableVoices.find(v => v.lang.startsWith('en')) || availableVoices[0];
-        
-        if (preferred) utterance.voice = preferred;
+      const femaleVoice = getCuteFemaleVoice();
+      if (femaleVoice) {
+        utterance.voice = femaleVoice;
       }
 
       utterance.onstart = () => {
