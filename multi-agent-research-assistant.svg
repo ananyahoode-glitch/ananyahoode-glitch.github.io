@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mara-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1424"/>
+      <stop offset="100%" stop-color="#080C16"/>
+    </linearGradient>
+    <linearGradient id="mara-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161F33"/>
+      <stop offset="100%" stop-color="#0F1626"/>
+    </linearGradient>
+    <filter id="mara-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect width="600" height="380" rx="16" fill="url(#mara-bg)" stroke="#23304E" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="560" height="42" rx="8" fill="#141D30" stroke="#2D3A58" stroke-width="1"/>
+  <circle cx="42" cy="39" r="6" fill="#EF4444"/>
+  <circle cx="60" cy="39" r="6" fill="#F59E0B"/>
+  <circle cx="78" cy="39" r="6" fill="#10B981"/>
+  <text x="105" y="44" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#F1F5F9">MULTI-AGENT RESEARCH ASSISTANT // AUTONOMOUS AI ORCHESTRATION</text>
+  <rect x="440" y="27" width="125" height="24" rx="12" fill="#1E2B45" stroke="#55E6D1" stroke-width="1"/>
+  <circle cx="454" cy="39" r="4" fill="#55E6D1" filter="url(#mara-glow)"/>
+  <text x="466" y="43" font-family="sans-serif" font-size="10" fill="#55E6D1">AGENTS SYNCED</text>
+
+  <!-- Left: Multi-Agent Network Topology -->
+  <rect x="20" y="74" width="340" height="286" rx="10" fill="url(#mara-panel)" stroke="#273552" stroke-width="1"/>
+  <text x="36" y="100" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#55E6D1">MULTI-AGENT DIRECTED WORKFLOW</text>
+
+  <!-- Connection Links with Data Packets -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="190" y1="150" x2="100" y2="245" stroke="#A78BFA" stroke-dasharray="4 4"/>
+    <line x1="190" y1="150" x2="190" y2="280" stroke="#55E6D1"/>
+    <line x1="190" y1="150" x2="280" y2="245" stroke="#60A5FA" stroke-dasharray="4 4"/>
+    <line x1="100" y1="245" x2="190" y2="280" stroke="#475569"/>
+    <line x1="280" y1="245" x2="190" y2="280" stroke="#475569"/>
+  </g>
+
+  <!-- Center Hub: Supervisor / Planner Node -->
+  <g transform="translate(190, 150)">
+    <circle cx="0" cy="0" r="32" fill="#1E1B4B" stroke="#A78BFA" stroke-width="2.5" filter="url(#mara-glow)"/>
+    <circle cx="0" cy="0" r="14" fill="#A78BFA"/>
+    <text x="0" y="48" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#F1F5F9" text-anchor="middle">SUPERVISOR AGENT</text>
+    <text x="0" y="60" font-family="sans-serif" font-size="8" fill="#C4B5FD" text-anchor="middle">Task Decomposer</text>
+  </g>
+
+  <!-- Left Node: Web Search Agent -->
+  <g transform="translate(100, 245)">
+    <circle cx="0" cy="0" r="26" fill="#0C2538" stroke="#55E6D1" stroke-width="2" filter="url(#mara-glow)"/>
+    <circle cx="0" cy="0" r="10" fill="#55E6D1"/>
+    <text x="0" y="40" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#F1F5F9" text-anchor="middle">SEARCH AGENT</text>
+    <text x="0" y="51" font-family="sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Information Gathering</text>
+  </g>
+
+  <!-- Right Node: Analyzer / Critiquer Agent -->
+  <g transform="translate(280, 245)">
+    <circle cx="0" cy="0" r="26" fill="#172554" stroke="#60A5FA" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="#60A5FA"/>
+    <text x="0" y="40" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#F1F5F9" text-anchor="middle">ANALYZER AGENT</text>
+    <text x="0" y="51" font-family="sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Fact Checking & Filter</text>
+  </g>
+
+  <!-- Bottom Node: Synthesis / Report Writer -->
+  <g transform="translate(190, 280)">
+    <circle cx="0" cy="0" r="22" fill="#064E3B" stroke="#34D399" stroke-width="2"/>
+    <circle cx="0" cy="0" r="8" fill="#34D399"/>
+    <text x="0" y="34" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#F1F5F9" text-anchor="middle">SYNTHESIZER</text>
+    <text x="0" y="45" font-family="sans-serif" font-size="8" fill="#34D399" text-anchor="middle">Structured Output</text>
+  </g>
+
+  <!-- Right Side: Agent Terminal Execution Stream -->
+  <rect x="375" y="74" width="205" height="286" rx="10" fill="url(#mara-panel)" stroke="#273552" stroke-width="1"/>
+  <text x="390" y="100" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#A78BFA">AGENT LOG STREAM</text>
+
+  <!-- Mini Console lines -->
+  <rect x="388" y="115" width="179" height="230" rx="6" fill="#070A11" stroke="#1B2436" stroke-width="1"/>
+  
+  <g font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">
+    <text x="396" y="135" fill="#55E6D1">&gt; supervisor.init()</text>
+    <text x="396" y="152" fill="#F1F5F9">Query decomposed:</text>
+    <text x="396" y="166" fill="#64748B">[subtasks: 3 allocated]</text>
+    
+    <text x="396" y="190" fill="#55E6D1">&gt; search_agent.run()</text>
+    <text x="396" y="204" fill="#64748B">Found 18 valid sources</text>
+    <text x="396" y="218" fill="#64748B">Extracting citations...</text>
+
+    <text x="396" y="242" fill="#60A5FA">&gt; analyzer.evaluate()</text>
+    <text x="396" y="256" fill="#64748B">Confidence score: 0.96</text>
+    <text x="396" y="270" fill="#34D399">Cross-verified: TRUE</text>
+
+    <text x="396" y="295" fill="#A78BFA">&gt; synthesizer.render()</text>
+    <text x="396" y="310" fill="#F1F5F9">Brief compiled. [2.4k tok]</text>
+    <text x="396" y="328" fill="#34D399">STATUS: 200 SUCCESS</text>
+  </g>
+</svg>

@@ -1,0 +1,218 @@
+<svg id="r4x-svg-root" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="r4x-armor-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2742"/>
+      <stop offset="50%" stop-color="#141B2D"/>
+      <stop offset="100%" stop-color="#0E1322"/>
+    </linearGradient>
+
+    <linearGradient id="r4x-armor-light" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D3A5D"/>
+      <stop offset="100%" stop-color="#1A2238"/>
+    </linearGradient>
+
+    <linearGradient id="r4x-visor-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#04070D"/>
+      <stop offset="70%" stop-color="#0B101D"/>
+      <stop offset="100%" stop-color="#141E33"/>
+    </linearGradient>
+
+    <linearGradient id="r4x-violet-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <linearGradient id="r4x-cyan-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A7F3D0"/>
+      <stop offset="50%" stop-color="#55E6D1"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <linearGradient id="r4x-thruster-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#55E6D1" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#080B12" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="r4x-glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="r4x-glow-intense" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur1"/>
+      <feGaussianBlur stdDeviation="4" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="r4x-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <g id="r4x-entire-bot" class="r4x-hover-group" filter="url(#r4x-shadow)">
+    <!-- Anti-gravity thruster plume -->
+    <g id="r4x-thruster-plume" class="r4x-flame">
+      <ellipse cx="250" cy="505" rx="55" ry="16" fill="url(#r4x-thruster-grad)" filter="url(#r4x-glow-cyan)"/>
+      <ellipse cx="250" cy="500" rx="30" ry="10" fill="#55E6D1" opacity="0.6" filter="url(#r4x-glow-cyan)"/>
+      <ellipse cx="250" cy="495" rx="14" ry="5" fill="#FFFFFF" opacity="0.9"/>
+    </g>
+
+    <!-- Floating Left Shoulder/Arm Pod -->
+    <g id="r4x-left-arm" class="r4x-floating-arm-left" transform="translate(70, 290)">
+      <rect x="0" y="0" width="46" height="85" rx="23" fill="url(#r4x-armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+      <circle cx="23" cy="24" r="14" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+      <circle cx="23" cy="24" r="6" fill="#55E6D1" filter="url(#r4x-glow-cyan)"/>
+      <rect x="18" y="52" width="10" height="20" rx="4" fill="#202A44"/>
+      <ellipse cx="23" cy="85" rx="12" ry="4" fill="#55E6D1" opacity="0.4" filter="url(#r4x-glow-cyan)"/>
+    </g>
+
+    <!-- Floating Right Shoulder/Arm Pod -->
+    <g id="r4x-right-arm" class="r4x-floating-arm-right" transform="translate(384, 290)">
+      <rect x="0" y="0" width="46" height="85" rx="23" fill="url(#r4x-armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+      <circle cx="23" cy="24" r="14" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+      <circle cx="23" cy="24" r="6" fill="#55E6D1" filter="url(#r4x-glow-cyan)"/>
+      <rect x="18" y="52" width="10" height="20" rx="4" fill="#202A44"/>
+      <ellipse cx="23" cy="85" rx="12" ry="4" fill="#55E6D1" opacity="0.4" filter="url(#r4x-glow-cyan)"/>
+    </g>
+
+    <!-- Main Torso / Chassis -->
+    <g id="r4x-torso">
+      <!-- Neck hydraulic collar -->
+      <path d="M210 250 L290 250 L280 280 L220 280 Z" fill="#0C101B" stroke="#2D3A5D" stroke-width="2"/>
+      <line x1="230" y1="254" x2="230" y2="276" stroke="#55E6D1" stroke-width="1.5" opacity="0.8"/>
+      <line x1="250" y1="254" x2="250" y2="276" stroke="#A78BFA" stroke-width="1.5" opacity="0.8"/>
+      <line x1="270" y1="254" x2="270" y2="276" stroke="#55E6D1" stroke-width="1.5" opacity="0.8"/>
+
+      <!-- Body Chassis Plate -->
+      <path d="M165 285 Q250 275 335 285 L360 410 Q250 475 140 410 Z" fill="url(#r4x-armor-grad)" stroke="url(#r4x-violet-glow)" stroke-width="2.5"/>
+      
+      <!-- Upper Chest Plate -->
+      <path d="M185 295 Q250 288 315 295 L328 355 Q250 375 172 355 Z" fill="url(#r4x-armor-light)" stroke="#2D3A5D" stroke-width="1.5"/>
+
+      <!-- Panel lines & cyber markings -->
+      <path d="M190 310 L220 310" stroke="#55E6D1" stroke-width="2" stroke-linecap="round"/>
+      <path d="M310 310 L280 310" stroke="#55E6D1" stroke-width="2" stroke-linecap="round"/>
+      <text x="250" y="312" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8" letter-spacing="3" text-anchor="middle">R4X • ARCH-01</text>
+
+      <!-- Chassis Bottom Thruster Ring -->
+      <ellipse cx="250" cy="460" rx="65" ry="18" fill="#141B2D" stroke="#55E6D1" stroke-width="2"/>
+      <ellipse cx="250" cy="460" rx="45" ry="12" fill="#090D17" stroke="#A78BFA" stroke-width="1.5"/>
+
+      <!-- Central Arc Reactor / Energy Core -->
+      <g id="r4x-energy-core" class="r4x-pulse-core" transform="translate(250, 395)">
+        <circle cx="0" cy="0" r="38" fill="#070A12" stroke="#25324E" stroke-width="3"/>
+        <circle cx="0" cy="0" r="32" fill="#0C1322" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="6 4" class="r4x-spinning-ring"/>
+        <circle cx="0" cy="0" r="24" fill="none" stroke="#55E6D1" stroke-width="2" stroke-dasharray="16 10"/>
+        <circle cx="0" cy="0" r="16" fill="url(#r4x-cyan-glow)" filter="url(#r4x-glow-intense)"/>
+        <circle cx="0" cy="0" r="7" fill="#FFFFFF"/>
+      </g>
+    </g>
+
+    <!-- Head Unit (Tracks Mouse Rotation via JS) -->
+    <g id="r4x-head-unit" class="r4x-head-interactive" style="transform-origin: 250px 175px;">
+      <!-- Central Antenna -->
+      <g id="r4x-antenna">
+        <line x1="250" y1="65" x2="250" y2="18" stroke="#A78BFA" stroke-width="4" stroke-linecap="round"/>
+        <line x1="250" y1="45" x2="250" y2="22" stroke="#55E6D1" stroke-width="2" stroke-linecap="round"/>
+        <!-- Glowing Antenna Tip -->
+        <circle id="r4x-antenna-tip" cx="250" cy="14" r="8" fill="#55E6D1" filter="url(#r4x-glow-intense)"/>
+        <circle cx="250" cy="14" r="3.5" fill="#FFFFFF"/>
+        <!-- Antenna Broadcast Waves (animated) -->
+        <path d="M236 10 A 16 16 0 0 1 264 10" fill="none" stroke="#55E6D1" stroke-width="1.5" opacity="0.6" stroke-linecap="round" class="r4x-signal-wave-1"/>
+        <path d="M228 4 A 26 26 0 0 1 272 4" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.4" stroke-linecap="round" class="r4x-signal-wave-2"/>
+      </g>
+
+      <!-- Left Ear Sensor Pod -->
+      <g id="r4x-left-ear" transform="translate(112, 130)">
+        <rect x="0" y="0" width="22" height="65" rx="10" fill="url(#r4x-armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+        <circle cx="11" cy="32" r="7" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+        <circle cx="11" cy="32" r="3" fill="#55E6D1" filter="url(#r4x-glow-cyan)"/>
+      </g>
+
+      <!-- Right Ear Sensor Pod -->
+      <g id="r4x-right-ear" transform="translate(366, 130)">
+        <rect x="0" y="0" width="22" height="65" rx="10" fill="url(#r4x-armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+        <circle cx="11" cy="32" r="7" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+        <circle cx="11" cy="32" r="3" fill="#55E6D1" filter="url(#r4x-glow-cyan)"/>
+      </g>
+
+      <!-- Outer Helmet Shell -->
+      <rect x="126" y="55" width="248" height="195" rx="75" fill="url(#r4x-armor-grad)" stroke="url(#r4x-violet-glow)" stroke-width="3"/>
+      
+      <!-- Top Helmet Bevel Accent -->
+      <path d="M175 60 Q250 48 325 60 L315 78 Q250 68 185 78 Z" fill="#2D3A5D" opacity="0.6"/>
+      
+      <!-- Forehead Crest & Status Badge -->
+      <rect x="230" y="70" width="40" height="10" rx="5" fill="#0A0E18" stroke="#55E6D1" stroke-width="1"/>
+      <circle cx="250" cy="75" r="2.5" fill="#55E6D1" filter="url(#r4x-glow-cyan)"/>
+
+      <!-- Glossy Visor Frame -->
+      <rect x="146" y="94" width="208" height="128" rx="46" fill="url(#r4x-visor-grad)" stroke="#2B3754" stroke-width="2.5"/>
+      <rect x="148" y="96" width="204" height="124" rx="44" fill="none" stroke="rgba(85, 230, 209, 0.25)" stroke-width="1"/>
+
+      <!-- Curved Visor Specular Glass Sheen -->
+      <path d="M165 106 Q250 96 335 110 C300 120 200 120 165 106 Z" fill="rgba(255, 255, 255, 0.15)"/>
+      <ellipse cx="178" cy="116" rx="12" ry="4" fill="rgba(255, 255, 255, 0.3)" transform="rotate(-15 178 116)"/>
+
+      <!-- Digital Eyes & Face Interface Display -->
+      <g id="r4x-face-display">
+        <!-- Left Eye Socket -->
+        <g id="r4x-left-eye-socket" transform="translate(192, 148)">
+          <!-- Ambient eye background slot -->
+          <rect x="-24" y="-20" width="48" height="40" rx="18" fill="#060A13" stroke="rgba(85, 230, 209, 0.3)" stroke-width="1"/>
+          
+          <!-- Dynamic Left Pupil (Controlled by JS mouse tracking) -->
+          <g id="r4x-left-pupil" class="r4x-eye-pupil">
+            <!-- Digital glowing eye matrix -->
+            <rect x="-18" y="-14" width="36" height="28" rx="13" fill="#55E6D1" filter="url(#r4x-glow-intense)"/>
+            <rect x="-14" y="-10" width="28" height="20" rx="9" fill="#E0FDF4"/>
+            <!-- Cute catchlight reflections -->
+            <circle cx="-5" cy="-4" r="3.5" fill="#FFFFFF"/>
+            <circle cx="6" cy="4" r="2" fill="#FFFFFF"/>
+          </g>
+        </g>
+
+        <!-- Right Eye Socket -->
+        <g id="r4x-right-eye-socket" transform="translate(308, 148)">
+          <!-- Ambient eye background slot -->
+          <rect x="-24" y="-20" width="48" height="40" rx="18" fill="#060A13" stroke="rgba(85, 230, 209, 0.3)" stroke-width="1"/>
+          
+          <!-- Dynamic Right Pupil (Controlled by JS mouse tracking) -->
+          <g id="r4x-right-pupil" class="r4x-eye-pupil">
+            <!-- Digital glowing eye matrix -->
+            <rect x="-18" y="-14" width="36" height="28" rx="13" fill="#55E6D1" filter="url(#r4x-glow-intense)"/>
+            <rect x="-14" y="-10" width="28" height="20" rx="9" fill="#E0FDF4"/>
+            <!-- Cute catchlight reflections -->
+            <circle cx="-5" cy="-4" r="3.5" fill="#FFFFFF"/>
+            <circle cx="6" cy="4" r="2" fill="#FFFFFF"/>
+          </g>
+        </g>
+
+        <!-- Cyber Blush Indicators (Cheeks) -->
+        <g id="r4x-blush-left" opacity="0.7">
+          <line x1="168" y1="184" x2="182" y2="184" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="170" y1="190" x2="180" y2="190" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        <g id="r4x-blush-right" opacity="0.7">
+          <line x1="318" y1="184" x2="332" y2="184" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="320" y1="190" x2="330" y2="190" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+
+        <!-- Digital Mouth / Audio Waveform HUD -->
+        <g id="r4x-mouth" class="r4x-mouth-group" transform="translate(250, 196)">
+          <path id="r4x-mouth-path" d="M-22 0 Q0 12 22 0" fill="none" stroke="#55E6D1" stroke-width="3" stroke-linecap="round" filter="url(#r4x-glow-cyan)"/>
+          <circle cx="-22" cy="0" r="2" fill="#A78BFA"/>
+          <circle cx="22" cy="0" r="2" fill="#A78BFA"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

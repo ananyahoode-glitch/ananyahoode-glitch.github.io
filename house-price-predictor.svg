@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hpp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1424"/>
+      <stop offset="100%" stop-color="#080C16"/>
+    </linearGradient>
+    <linearGradient id="hpp-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161F33"/>
+      <stop offset="100%" stop-color="#0F1626"/>
+    </linearGradient>
+    <linearGradient id="hpp-curve" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#55E6D1"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <filter id="hpp-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect width="600" height="380" rx="16" fill="url(#hpp-bg)" stroke="#23304E" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="560" height="42" rx="8" fill="#141D30" stroke="#2D3A58" stroke-width="1"/>
+  <circle cx="42" cy="39" r="6" fill="#EF4444"/>
+  <circle cx="60" cy="39" r="6" fill="#F59E0B"/>
+  <circle cx="78" cy="39" r="6" fill="#10B981"/>
+  <text x="105" y="44" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#F1F5F9">HOUSE PRICE PREDICTOR // REGRESSION MODEL</text>
+  <rect x="440" y="27" width="125" height="24" rx="12" fill="#1E2B45" stroke="#55E6D1" stroke-width="1"/>
+  <circle cx="454" cy="39" r="4" fill="#55E6D1" filter="url(#hpp-glow)"/>
+  <text x="466" y="43" font-family="sans-serif" font-size="10" fill="#55E6D1">R² SCORE: 0.92</text>
+
+  <!-- Left Side: Architectural Wireframe & Inputs -->
+  <rect x="20" y="74" width="220" height="286" rx="10" fill="url(#hpp-panel)" stroke="#273552" stroke-width="1"/>
+  <text x="36" y="100" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#A78BFA">PARAMETRIC INFERENCE</text>
+
+  <!-- Isometric House Wireframe Schematic -->
+  <g transform="translate(130, 160)" stroke="#55E6D1" stroke-width="1.5" fill="none" opacity="0.85">
+    <!-- Roof -->
+    <polygon points="0,-45 55,-15 0,15 -55,-15" fill="rgba(85, 230, 209, 0.08)"/>
+    <line x1="0" y1="-45" x2="0" y2="15"/>
+    <!-- House Body -->
+    <polyline points="-55,-15 -55,45 0,75 55,45 55,-15"/>
+    <line x1="0" y1="15" x2="0" y2="75"/>
+    <line x1="-55" y1="45" x2="0" y2="75"/>
+    <line x1="0" y1="75" x2="55" y2="45"/>
+    <!-- Door & Windows -->
+    <rect x="-15" y="40" width="30" height="30" stroke="#A78BFA" stroke-width="1" fill="none"/>
+    <circle cx="0" cy="55" r="2" fill="#55E6D1"/>
+  </g>
+
+  <!-- Feature Telemetry -->
+  <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">
+    <text x="36" y="270">AREA: <tspan fill="#F1F5F9">2,450 sq.ft</tspan></text>
+    <text x="36" y="292">ROOMS: <tspan fill="#F1F5F9">4 BHK / 3 BATH</tspan></text>
+    <text x="36" y="314">LOC_IDX: <tspan fill="#55E6D1">0.84 PRIME</tspan></text>
+    <text x="36" y="338" fill="#55E6D1" font-weight="600">PREDICTED: $485,000</text>
+  </g>
+
+  <!-- Right Side: Regression Curve & Data Analysis -->
+  <rect x="255" y="74" width="325" height="286" rx="10" fill="url(#hpp-panel)" stroke="#273552" stroke-width="1"/>
+  <text x="275" y="100" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#55E6D1">VALUATION TRENDLINE vs ACTUAL (TEST SET)</text>
+
+  <!-- Plot Axes -->
+  <g stroke="#334155" stroke-width="1.5">
+    <line x1="285" y1="320" x2="555" y2="320"/>
+    <line x1="285" y1="120" x2="285" y2="320"/>
+  </g>
+  <!-- Grid -->
+  <g stroke="#1E293B" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="285" y1="270" x2="555" y2="270"/>
+    <line x1="285" y1="220" x2="555" y2="220"/>
+    <line x1="285" y1="170" x2="555" y2="170"/>
+    <line x1="375" y1="120" x2="375" y2="320"/>
+    <line x1="465" y1="120" x2="465" y2="320"/>
+  </g>
+
+  <!-- Data Scatter Points -->
+  <g fill="#A78BFA" opacity="0.7">
+    <circle cx="310" cy="305" r="3.5"/>
+    <circle cx="325" cy="285" r="3.5"/>
+    <circle cx="340" cy="295" r="3.5"/>
+    <circle cx="360" cy="265" r="3.5"/>
+    <circle cx="380" cy="245" r="3.5"/>
+    <circle cx="400" cy="255" r="3.5"/>
+    <circle cx="420" cy="225" r="3.5"/>
+    <circle cx="445" cy="195" r="3.5"/>
+    <circle cx="470" cy="205" r="3.5"/>
+    <circle cx="490" cy="170" r="3.5"/>
+    <circle cx="515" cy="150" r="3.5"/>
+    <circle cx="535" cy="140" r="3.5"/>
+  </g>
+
+  <!-- Polynomial Regression Curve -->
+  <path d="M295 315 Q390 270 450 210 T545 135" fill="none" stroke="url(#hpp-curve)" stroke-width="3" filter="url(#hpp-glow)"/>
+
+  <!-- Legend -->
+  <rect x="290" y="130" width="16" height="3" fill="#55E6D1"/>
+  <text x="312" y="135" font-family="sans-serif" font-size="10" fill="#F1F5F9">Fitted Regression</text>
+  <circle cx="298" cy="150" r="3" fill="#A78BFA"/>
+  <text x="312" y="153" font-family="sans-serif" font-size="10" fill="#94A3B8">Market Real Sales</text>
+</svg>

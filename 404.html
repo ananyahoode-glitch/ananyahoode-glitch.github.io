@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Neural Node Not Found | Ananya V. Hoode</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .notfound-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 10;
+    }
+    .notfound-code {
+      font-family: var(--font-mono);
+      font-size: clamp(5rem, 15vw, 9rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent-violet) 0%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .notfound-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      max-width: 520px;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), var(--border-glow);
+    }
+    .notfound-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+    }
+  </style>
+</head>
+<body class="cyber-body">
+
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="mesh-orb mesh-orb-1"></div>
+    <div class="mesh-orb mesh-orb-2"></div>
+    <div class="cyber-grid-overlay"></div>
+  </div>
+
+  <div class="notfound-container">
+    <div class="notfound-card">
+      <div class="notfound-icon">
+        <svg viewBox="0 0 64 64" width="80" height="80">
+          <rect x="6" y="10" width="52" height="42" rx="12" fill="#151C2E" stroke="#A78BFA" stroke-width="2"/>
+          <line x1="22" y1="28" x2="30" y2="36" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+          <line x1="30" y1="28" x2="22" y2="36" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+          <line x1="34" y1="28" x2="42" y2="36" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+          <line x1="42" y1="28" x2="34" y2="36" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 44 Q32 40 38 44" fill="none" stroke="#55E6D1" stroke-width="2" stroke-linecap="round"/>
+          <line x1="32" y1="10" x2="32" y2="4" stroke="#A78BFA" stroke-width="2"/>
+          <circle cx="32" cy="3" r="2" fill="#55E6D1"/>
+        </svg>
+      </div>
+
+      <div class="notfound-code">404</div>
+      <h1 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.85rem;">Neural Node Not Found</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">
+        R4X encountered an unmapped coordinate in hyperspace. The requested node or sub-routine does not exist.
+      </p>
+
+      <a href="index.html" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Return to Primary Base</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,58 +1,1218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b1022">
-  <meta name="description" content="Ananya V. Hoode — AI/ML engineering student building research tools, web applications and machine learning projects.">
-  <title>Ananya V. Hoode | AI/ML & Software Development</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Ananya V. Hoode | AI &amp; Machine Learning Developer Portfolio</title>
+  <meta name="title" content="Ananya V. Hoode | AI &amp; Machine Learning Developer Portfolio">
+  <meta name="description" content="Portfolio of Ananya V. Hoode — Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. Featuring interactive R4X BOT, Python, Django, and ML projects.">
+  <meta name="author" content="Ananya V. Hoode">
+  <meta name="keywords" content="Ananya V. Hoode, ananyahoode-glitch, Artificial Intelligence, Machine Learning, Python, Django, Full-Stack, Portfolio, R4X BOT, Developer">
+  <meta name="theme-color" content="#080B12">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ananyahoode-glitch.github.io/">
+  <meta property="og:title" content="Ananya V. Hoode | AI &amp; Machine Learning Developer Portfolio">
+  <meta property="og:description" content="Explore intelligent software solutions, Python &amp; Django applications, and machine learning models with the interactive R4X BOT.">
+  <meta property="og:image" content="assets/project-images/multi-agent-research-assistant.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ananyahoode-glitch.github.io/">
+  <meta property="twitter:title" content="Ananya V. Hoode | AI &amp; Machine Learning Developer Portfolio">
+  <meta property="twitter:description" content="Explore intelligent software solutions, Python &amp; Django applications, and machine learning models with the interactive R4X BOT.">
+  <meta property="twitter:image" content="assets/project-images/multi-agent-research-assistant.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="assets/favicon.svg">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="nav-shell">
-    <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="Ananya V Hoode home"><span class="brand-mark">AV</span><span>ananya<span class="brand-dot">.</span></span></a>
-      <div class="nav-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#connect">Connect</a></div>
-      <a class="nav-github" target="_blank" rel="noopener noreferrer" href="https://github.com/ananyahoode-glitch">GitHub <span aria-hidden="true">↗</span></a>
+<body class="cyber-body">
+
+  <!-- Ambient Background Canvas / Grid Mesh -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="mesh-orb mesh-orb-1"></div>
+    <div class="mesh-orb mesh-orb-2"></div>
+    <div class="mesh-orb mesh-orb-3"></div>
+    <div class="cyber-grid-overlay"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="cyber-header" id="header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="brand-logo" aria-label="Ananya V. Hoode Home">
+        <span class="logo-bot-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22">
+            <rect x="4" y="6" width="24" height="20" rx="6" fill="#151C2E" stroke="#55E6D1" stroke-width="1.5"/>
+            <circle cx="11" cy="16" r="2.5" fill="#55E6D1"/>
+            <circle cx="21" cy="16" r="2.5" fill="#55E6D1"/>
+            <line x1="16" y1="6" x2="16" y2="2" stroke="#A78BFA" stroke-width="2"/>
+            <circle cx="16" cy="2" r="1.5" fill="#55E6D1"/>
+          </svg>
+        </span>
+        <span class="brand-text">ANANYA<span class="brand-accent">.AI</span></span>
+        <span class="status-indicator-dot" title="R4X Bot Engine: Online"></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-num">02.</span> Projects</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-num">03.</span> Tech Stack</a></li>
+        <li><a href="#terminal" class="nav-link"><span class="nav-num">04.</span> Console</a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-num">05.</span> Contact</a></li>
+      </ul>
+
+      <!-- Nav Utility Actions -->
+      <div class="nav-actions">
+        <!-- Audio SFX Toggle Button -->
+        <button id="audio-toggle" class="btn-icon" aria-label="Toggle UI Sound Effects" title="Toggle Futuristic SFX">
+          <span class="audio-icon" aria-hidden="true">
+            <svg class="audio-on-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            </svg>
+            <svg class="audio-off-svg hidden" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <line x1="23" y1="9" x2="17" y2="15"/>
+              <line x1="17" y1="9" x2="23" y2="15"/>
+            </svg>
+          </span>
+          <span class="audio-label">SFX</span>
+        </button>
+
+        <!-- GitHub Profile Action Button -->
+        <a href="https://github.com/ananyahoode-glitch" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-cyan">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <!-- Mobile Nav Toggle -->
+        <button id="mobile-toggle" class="mobile-menu-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
     </nav>
   </header>
-  <main id="main">
-    <section class="hero container" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="spark"></span> COMPUTING WITH PURPOSE</p>
-        <h1>Hi, I'm <span class="gradient-text">Ananya.</span><br>I build ideas into <em>software.</em></h1>
-        <p class="hero-description">Computer Science Engineering student specializing in Artificial Intelligence &amp; Machine Learning. I explore useful AI systems, thoughtful web experiences, and practical ML projects.</p>
-        <div class="hero-actions"><a class="btn primary" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="btn secondary" href="https://github.com/ananyahoode-glitch" target="_blank" rel="noopener noreferrer">GitHub profile</a></div>
-        <div class="status-row"><span class="status-circle"></span> Learning, building &amp; documenting new ideas</div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <span class="mobile-drawer-title">// NAVIGATION MENU</span>
+        <button id="mobile-close" class="mobile-close-btn" aria-label="Close menu">&times;</button>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="float-chip chip-top">AI <span>↗</span></div>
-        <div class="core-icon">A<span>V</span></div>
-        <div class="float-chip chip-bottom"><span class="pulse-dot"></span> python / ml</div>
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link"><span class="nav-num">01.</span> About Me</a></li>
+        <li><a href="#projects" class="mobile-nav-link"><span class="nav-num">02.</span> Project Showcase</a></li>
+        <li><a href="#skills" class="mobile-nav-link"><span class="nav-num">03.</span> Tech Stack</a></li>
+        <li><a href="#terminal" class="mobile-nav-link"><span class="nav-num">04.</span> R4X Console</a></li>
+        <li><a href="#contact" class="mobile-nav-link"><span class="nav-num">05.</span> Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="https://github.com/ananyahoode-glitch" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">
+          <span>View GitHub Profile</span>
+        </a>
       </div>
-      <div class="hero-foot"><span>PORTFOLIO / 2026</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
-    </section>
-    <section class="section container about" id="about">
-      <div class="section-top"><span class="section-num">01 / INTRODUCTION</span><h2>Curiosity meets <span>engineering.</span></h2></div>
-      <div class="about-grid"><p>I'm interested in the intersection of <strong>machine learning, software development, and clear user experiences.</strong> I learn by turning ideas into working projects — from research workflows to data-driven applications.</p><div class="about-aside"><span class="eyebrow">MY APPROACH</span><p>Understand the problem. Build a practical solution. Document what works, and what still needs improvement.</p></div></div>
-    </section>
-    <section class="section container" id="projects">
-      <div class="section-top"><span class="section-num">02 / SELECTED WORK</span><div class="section-heading-line"><h2>Projects in <span>focus.</span></h2><a class="text-link" href="https://github.com/ananyahoode-glitch?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories ↗</a></div></div>
-      <div class="project-grid">
-        <article class="project-card"><div class="project-top"><span class="project-number">01 / AI SYSTEMS</span><span class="card-symbol" aria-hidden="true">✳</span></div><h3>Multi-Agent<br>Research Assistant</h3><p>A structured research workflow that coordinates agent roles, retrieves supporting sources, supports PDF input, and exports reports.</p><div class="tag-row"><span>Python</span><span>Streamlit</span><span>SQLite</span></div><a class="card-link" href="https://github.com/ananyahoode-glitch/multi-agent-research-assistant" target="_blank" rel="noopener noreferrer" aria-label="Open Multi-Agent Research Assistant source code">Explore repository <span aria-hidden="true">↗</span></a></article>
-        <article class="project-card"><div class="project-top"><span class="project-number">02 / FULL STACK</span><span class="card-symbol" aria-hidden="true">⌘</span></div><h3>Smart<br>Internship Portal</h3><p>A student and admin platform with internship discovery, applications, user authentication, and database-backed APIs.</p><div class="tag-row"><span>Node.js</span><span>Express</span><span>PostgreSQL</span></div><a class="card-link" href="https://github.com/ananyahoode-glitch/Smart-Internship-Portal" target="_blank" rel="noopener noreferrer" aria-label="Open Smart Internship Portal source code">Explore repository <span aria-hidden="true">↗</span></a></article>
-        <article class="project-card"><div class="project-top"><span class="project-number">03 / TEXT ANALYSIS</span><span class="card-symbol" aria-hidden="true">≋</span></div><h3>MatchWise<br>Resume Analyzer</h3><p>A privacy-first, explainable resume-to-job comparison tool with skill matching and evidence-based recommendations.</p><div class="tag-row"><span>Python</span><span>Document parsing</span><span>Matching</span></div><a class="card-link" href="https://github.com/ananyahoode-glitch/matchwise-ai-resume-analyzer" target="_blank" rel="noopener noreferrer" aria-label="Open MatchWise resume analyzer source code">Explore repository <span aria-hidden="true">↗</span></a></article>
-        <article class="project-card"><div class="project-top"><span class="project-number">04 / MACHINE LEARNING</span><span class="card-symbol" aria-hidden="true">◈</span></div><h3>House Price<br>Predictor</h3><p>An educational regression pipeline using sample housing data, model evaluation, and a Streamlit prediction interface.</p><div class="tag-row"><span>Scikit-learn</span><span>Pandas</span><span>Streamlit</span></div><a class="card-link" href="https://github.com/ananyahoode-glitch/House-price-predictor" target="_blank" rel="noopener noreferrer" aria-label="Open House Price Predictor source code">Explore repository <span aria-hidden="true">↗</span></a></article>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- =========================================================================
+         SECTION 1: HERO WITH INTERACTIVE R4X ROBOT
+         ========================================================================= -->
+    <section class="hero-section" id="hero" aria-label="Hero Section">
+      <div class="hero-grid-container">
+        
+        <!-- Left Column: Content, Title, and Call to Actions -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-pulse-dot"></span>
+            <span class="badge-text">STATUS: AVAILABLE FOR AI/ML OPPORTUNITIES</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting-pre">Hello, World! I am</span>
+            <span class="hero-name-gradient">ANANYA V. HOODE</span>
+          </h1>
+
+          <p class="hero-specialization">
+            <span class="highlight-cyan">Computer Science</span> · 
+            <span class="highlight-violet">Artificial Intelligence</span> · 
+            <span class="highlight-cyan">Machine Learning</span>
+          </p>
+
+          <p class="hero-quote">
+            “Building intelligent solutions, meaningful digital experiences, and practical software.”
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Projects</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M7 13l5 5 5-5M12 4v14"/>
+              </svg>
+            </a>
+
+            <a href="#contact" class="btn btn-outline-cyan">
+              <span>Let's Connect</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </a>
+
+            <a href="https://github.com/ananyahoode-glitch" target="_blank" rel="noopener noreferrer" class="btn btn-outline-violet">
+              <span>View GitHub</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Telemetry Bar -->
+          <div class="hero-telemetry-bar">
+            <div class="telemetry-item">
+              <span class="telem-label">IDENTITY:</span>
+              <span class="telem-val">ananyahoode-glitch</span>
+            </div>
+            <div class="telemetry-separator">/</div>
+            <div class="telemetry-item">
+              <span class="telem-label">SPECIALIZATION:</span>
+              <span class="telem-val">AI &amp; ML</span>
+            </div>
+            <div class="telemetry-separator">/</div>
+            <div class="telemetry-item">
+              <span class="telem-label">CORE STACK:</span>
+              <span class="telem-val">Python · Django</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive R4X BOT Stage -->
+        <div class="hero-robot-stage" id="robot-stage">
+          
+          <!-- Robot Holographic Aura and Rings -->
+          <div class="robot-holo-ring" aria-hidden="true"></div>
+          <div class="robot-ambient-glow" aria-hidden="true"></div>
+
+          <!-- Interactive Speech Bubble / HUD Dialog -->
+          <div class="robot-speech-bubble" id="robot-dialogue-box" role="status" aria-live="polite">
+            <div class="dialogue-header">
+              <span class="r4x-tag">// R4X COMPANION HUD</span>
+              <span class="r4x-mood-indicator" id="r4x-mood-text">STATE: READY</span>
+            </div>
+            <p class="dialogue-message" id="robot-speech-text">
+              "Hi there! I am R4X, Ananya's interactive AI companion. Move your cursor to see me follow you, click me to chat, or explore Ananya's projects below!"
+            </p>
+            <div class="dialogue-chips">
+              <button class="dialogue-chip" id="chip-hello" data-action="hello">👋 Say Hello</button>
+              <button class="dialogue-chip" id="chip-about" data-action="about">💡 Who is Ananya?</button>
+              <button class="dialogue-chip" id="chip-projects" data-action="project">🚀 Top Project</button>
+              <button class="dialogue-chip" id="chip-scan" data-action="scan">⚡ Scan Matrix</button>
+            </div>
+          </div>
+
+          <!-- Master Interactive R4X Robot Canvas / SVG Wrapper -->
+          <div class="robot-canvas-wrapper" id="r4x-interactive-target" tabindex="0" role="button" aria-label="Interactive R4X Robot. Click to interact.">
+            
+            <!-- SVG Robot with separable controllable parts -->
+            <svg id="r4x-master-svg" viewBox="0 0 500 560" width="100%" height="100%">
+              <defs>
+                <linearGradient id="armor-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1E2742"/>
+                  <stop offset="50%" stop-color="#141B2D"/>
+                  <stop offset="100%" stop-color="#0E1322"/>
+                </linearGradient>
+
+                <linearGradient id="armor-light" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2D3A5D"/>
+                  <stop offset="100%" stop-color="#1A2238"/>
+                </linearGradient>
+
+                <linearGradient id="visor-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#04070D"/>
+                  <stop offset="70%" stop-color="#0B101D"/>
+                  <stop offset="100%" stop-color="#141E33"/>
+                </linearGradient>
+
+                <linearGradient id="violet-glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#C4B5FD"/>
+                  <stop offset="50%" stop-color="#A78BFA"/>
+                  <stop offset="100%" stop-color="#7C3AED"/>
+                </linearGradient>
+
+                <linearGradient id="cyan-glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#A7F3D0"/>
+                  <stop offset="50%" stop-color="#55E6D1"/>
+                  <stop offset="100%" stop-color="#06B6D4"/>
+                </linearGradient>
+
+                <linearGradient id="thruster-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#55E6D1" stop-opacity="0.9"/>
+                  <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#080B12" stop-opacity="0"/>
+                </linearGradient>
+
+                <filter id="svg-glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+
+                <filter id="svg-glow-intense" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="8" result="b1"/>
+                  <feGaussianBlur stdDeviation="3" result="b2"/>
+                  <feMerge>
+                    <feMergeNode in="b1"/>
+                    <feMergeNode in="b2"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+
+                <filter id="svg-shadow" x="-10%" y="-10%" width="120%" height="130%">
+                  <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.75"/>
+                </filter>
+              </defs>
+
+              <!-- Main Hover Animation Group -->
+              <g id="r4x-anim-root" class="r4x-floating-idle" filter="url(#svg-shadow)">
+                
+                <!-- Bottom Thruster Propulsion Plume -->
+                <g id="r4x-thruster-group" class="r4x-flame-flicker">
+                  <ellipse cx="250" cy="505" rx="55" ry="16" fill="url(#thruster-grad)" filter="url(#svg-glow-cyan)"/>
+                  <ellipse cx="250" cy="498" rx="30" ry="9" fill="#55E6D1" opacity="0.7" filter="url(#svg-glow-cyan)"/>
+                  <ellipse cx="250" cy="494" rx="14" ry="4" fill="#FFFFFF" opacity="0.9"/>
+                </g>
+
+                <!-- Floating Left Shoulder Thruster Pod -->
+                <g id="r4x-left-shoulder" class="r4x-floating-shoulder-left" transform="translate(68, 288)">
+                  <rect x="0" y="0" width="48" height="88" rx="24" fill="url(#armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+                  <circle cx="24" cy="24" r="14" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+                  <circle cx="24" cy="24" r="6" fill="#55E6D1" filter="url(#svg-glow-cyan)"/>
+                  <rect x="19" y="54" width="10" height="20" rx="4" fill="#202A44"/>
+                  <ellipse cx="24" cy="88" rx="12" ry="4" fill="#55E6D1" opacity="0.5" filter="url(#svg-glow-cyan)"/>
+                </g>
+
+                <!-- Floating Right Shoulder Thruster Pod -->
+                <g id="r4x-right-shoulder" class="r4x-floating-shoulder-right" transform="translate(384, 288)">
+                  <rect x="0" y="0" width="48" height="88" rx="24" fill="url(#armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+                  <circle cx="24" cy="24" r="14" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+                  <circle cx="24" cy="24" r="6" fill="#55E6D1" filter="url(#svg-glow-cyan)"/>
+                  <rect x="19" y="54" width="10" height="20" rx="4" fill="#202A44"/>
+                  <ellipse cx="24" cy="88" rx="12" ry="4" fill="#55E6D1" opacity="0.5" filter="url(#svg-glow-cyan)"/>
+                </g>
+
+                <!-- Torso Body Chassis -->
+                <g id="r4x-chassis-group">
+                  <!-- Neck hydraulic connection -->
+                  <path d="M210 250 L290 250 L280 280 L220 280 Z" fill="#0C101B" stroke="#2D3A5D" stroke-width="2"/>
+                  <line x1="230" y1="254" x2="230" y2="276" stroke="#55E6D1" stroke-width="1.5" opacity="0.8"/>
+                  <line x1="250" y1="254" x2="250" y2="276" stroke="#A78BFA" stroke-width="1.5" opacity="0.8"/>
+                  <line x1="270" y1="254" x2="270" y2="276" stroke="#55E6D1" stroke-width="1.5" opacity="0.8"/>
+
+                  <!-- Main Armored Hull -->
+                  <path d="M165 285 Q250 275 335 285 L360 410 Q250 475 140 410 Z" fill="url(#armor-grad)" stroke="url(#violet-glow-grad)" stroke-width="2.5"/>
+                  
+                  <!-- Chest Armor Inset -->
+                  <path d="M185 295 Q250 288 315 295 L328 355 Q250 375 172 355 Z" fill="url(#armor-light)" stroke="#2D3A5D" stroke-width="1.5"/>
+
+                  <!-- Technical Inscriptions -->
+                  <path d="M190 310 L220 310" stroke="#55E6D1" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M310 310 L280 310" stroke="#55E6D1" stroke-width="2" stroke-linecap="round"/>
+                  <text x="250" y="312" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8" letter-spacing="3" text-anchor="middle">R4X • ARCH-01</text>
+
+                  <!-- Thruster Base Collar -->
+                  <ellipse cx="250" cy="460" rx="65" ry="18" fill="#141B2D" stroke="#55E6D1" stroke-width="2"/>
+                  <ellipse cx="250" cy="460" rx="45" ry="12" fill="#090D17" stroke="#A78BFA" stroke-width="1.5"/>
+
+                  <!-- Central Arc Reactor / Energy Core -->
+                  <g id="r4x-core-node" class="r4x-core-pulse" transform="translate(250, 395)">
+                    <circle cx="0" cy="0" r="38" fill="#070A12" stroke="#25324E" stroke-width="3"/>
+                    <circle cx="0" cy="0" r="32" fill="#0C1322" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="6 4" class="r4x-rotating-gear"/>
+                    <circle cx="0" cy="0" r="24" fill="none" stroke="#55E6D1" stroke-width="2" stroke-dasharray="16 10"/>
+                    <circle id="r4x-reactor-core" cx="0" cy="0" r="16" fill="url(#cyan-glow-grad)" filter="url(#svg-glow-intense)"/>
+                    <circle cx="0" cy="0" r="7" fill="#FFFFFF"/>
+                  </g>
+                </g>
+
+                <!-- Head Unit (Reacts to cursor movement with 3D tilt and eye tracking) -->
+                <g id="r4x-head-group" class="r4x-head-pivot" style="transform-origin: 250px 175px;">
+                  
+                  <!-- Central Antenna -->
+                  <g id="r4x-antenna-mast">
+                    <line x1="250" y1="65" x2="250" y2="18" stroke="#A78BFA" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="250" y1="45" x2="250" y2="22" stroke="#55E6D1" stroke-width="2" stroke-linecap="round"/>
+                    <circle id="r4x-antenna-orb" cx="250" cy="14" r="8" fill="#55E6D1" filter="url(#svg-glow-intense)"/>
+                    <circle cx="250" cy="14" r="3.5" fill="#FFFFFF"/>
+                    <!-- Signal broadcast waves -->
+                    <path d="M236 10 A 16 16 0 0 1 264 10" fill="none" stroke="#55E6D1" stroke-width="1.5" opacity="0.6" stroke-linecap="round" class="signal-pulse-1"/>
+                    <path d="M228 4 A 26 26 0 0 1 272 4" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.4" stroke-linecap="round" class="signal-pulse-2"/>
+                  </g>
+
+                  <!-- Ear Sensor Discs -->
+                  <g id="r4x-ear-left" transform="translate(112, 130)">
+                    <rect x="0" y="0" width="22" height="65" rx="10" fill="url(#armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+                    <circle cx="11" cy="32" r="7" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+                    <circle cx="11" cy="32" r="3" fill="#55E6D1" filter="url(#svg-glow-cyan)"/>
+                  </g>
+
+                  <g id="r4x-ear-right" transform="translate(366, 130)">
+                    <rect x="0" y="0" width="22" height="65" rx="10" fill="url(#armor-grad)" stroke="#A78BFA" stroke-width="2"/>
+                    <circle cx="11" cy="32" r="7" fill="#0C101B" stroke="#55E6D1" stroke-width="1.5"/>
+                    <circle cx="11" cy="32" r="3" fill="#55E6D1" filter="url(#svg-glow-cyan)"/>
+                  </g>
+
+                  <!-- Outer Helmet Frame -->
+                  <rect x="126" y="55" width="248" height="195" rx="75" fill="url(#armor-grad)" stroke="url(#violet-glow-grad)" stroke-width="3"/>
+                  
+                  <!-- Helmet Bevel Line -->
+                  <path d="M175 60 Q250 48 325 60 L315 78 Q250 68 185 78 Z" fill="#2D3A5D" opacity="0.6"/>
+                  
+                  <!-- Forehead Status Sensor -->
+                  <rect x="230" y="70" width="40" height="10" rx="5" fill="#0A0E18" stroke="#55E6D1" stroke-width="1"/>
+                  <circle cx="250" cy="75" r="2.5" fill="#55E6D1" filter="url(#svg-glow-cyan)"/>
+
+                  <!-- Visor Screen Surface -->
+                  <rect x="146" y="94" width="208" height="128" rx="46" fill="url(#visor-grad)" stroke="#2B3754" stroke-width="2.5"/>
+                  <rect x="148" y="96" width="204" height="124" rx="44" fill="none" stroke="rgba(85, 230, 209, 0.25)" stroke-width="1"/>
+
+                  <!-- Visor Glass Reflection Curve -->
+                  <path d="M165 106 Q250 96 335 110 C300 120 200 120 165 106 Z" fill="rgba(255, 255, 255, 0.12)"/>
+                  <ellipse cx="178" cy="116" rx="12" ry="4" fill="rgba(255, 255, 255, 0.25)" transform="rotate(-15 178 116)"/>
+
+                  <!-- Digital Face Display -->
+                  <g id="r4x-face-elements">
+                    
+                    <!-- Left Eye Assembly -->
+                    <g id="r4x-left-eye-socket" transform="translate(192, 148)">
+                      <rect x="-24" y="-20" width="48" height="40" rx="18" fill="#060A13" stroke="rgba(85, 230, 209, 0.3)" stroke-width="1"/>
+                      
+                      <!-- Controllable Left Pupil Element -->
+                      <g id="r4x-left-pupil" class="r4x-pupil-interactive">
+                        <rect x="-18" y="-14" width="36" height="28" rx="13" fill="#55E6D1" filter="url(#svg-glow-intense)"/>
+                        <rect x="-14" y="-10" width="28" height="20" rx="9" fill="#E0FDF4"/>
+                        <circle cx="-5" cy="-4" r="3.5" fill="#FFFFFF"/>
+                        <circle cx="6" cy="4" r="2" fill="#FFFFFF"/>
+                      </g>
+                    </g>
+
+                    <!-- Right Eye Assembly -->
+                    <g id="r4x-right-eye-socket" transform="translate(308, 148)">
+                      <rect x="-24" y="-20" width="48" height="40" rx="18" fill="#060A13" stroke="rgba(85, 230, 209, 0.3)" stroke-width="1"/>
+                      
+                      <!-- Controllable Right Pupil Element -->
+                      <g id="r4x-right-pupil" class="r4x-pupil-interactive">
+                        <rect x="-18" y="-14" width="36" height="28" rx="13" fill="#55E6D1" filter="url(#svg-glow-intense)"/>
+                        <rect x="-14" y="-10" width="28" height="20" rx="9" fill="#E0FDF4"/>
+                        <circle cx="-5" cy="-4" r="3.5" fill="#FFFFFF"/>
+                        <circle cx="6" cy="4" r="2" fill="#FFFFFF"/>
+                      </g>
+                    </g>
+
+                    <!-- Cheek Cyber Blushes -->
+                    <g id="r4x-blush-left-el" opacity="0.7">
+                      <line x1="168" y1="184" x2="182" y2="184" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+                      <line x1="170" y1="190" x2="180" y2="190" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+                    </g>
+                    <g id="r4x-blush-right-el" opacity="0.7">
+                      <line x1="318" y1="184" x2="332" y2="184" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+                      <line x1="320" y1="190" x2="330" y2="190" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+                    </g>
+
+                    <!-- Expressive Digital Mouth Display -->
+                    <g id="r4x-mouth-display" transform="translate(250, 196)">
+                      <path id="r4x-mouth-curve" d="M-22 0 Q0 12 22 0" fill="none" stroke="#55E6D1" stroke-width="3" stroke-linecap="round" filter="url(#svg-glow-cyan)"/>
+                      <circle cx="-22" cy="0" r="2" fill="#A78BFA"/>
+                      <circle cx="22" cy="0" r="2" fill="#A78BFA"/>
+                    </g>
+
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Bottom Robot Controls -->
+          <div class="robot-stage-controls">
+            <button id="btn-say-hello" class="btn btn-sm btn-outline-cyan">
+              <span>Say Hello 👋</span>
+            </button>
+            <button id="btn-change-mood" class="btn btn-sm btn-outline-violet">
+              <span>Change Mood ⚡</span>
+            </button>
+          </div>
+        </div>
+
       </div>
-      <p class="disclosure">Projects above link to GitHub source repositories. Web demos will be added when separately deployed.</p>
     </section>
-    <section class="section container skills" id="skills"><div class="section-top"><span class="section-num">03 / TOOLKIT</span><h2>Tools I <span>work with.</span></h2></div><div class="skill-layout"><div class="skill-group"><h3>Languages &amp; Web</h3><div class="skill-tags"><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Node.js</span><span>Express</span></div></div><div class="skill-group"><h3>AI &amp; Data</h3><div class="skill-tags"><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Streamlit</span><span>Machine Learning</span></div></div><div class="skill-group"><h3>Storage &amp; Workflow</h3><div class="skill-tags"><span>PostgreSQL</span><span>SQLite</span><span>Git</span><span>GitHub</span><span>REST APIs</span></div></div></div></section>
-    <section class="connect-section" id="connect"><div class="container"><span class="section-num">04 / CONNECT</span><div class="connect-row"><div><h2>Let's build something <span>meaningful.</span></h2><p>Explore my work, read the documentation, or connect through GitHub.</p></div><a class="btn primary" href="https://github.com/ananyahoode-glitch" target="_blank" rel="noopener noreferrer">Visit my GitHub ↗</a></div></div></section>
+
+    <!-- =========================================================================
+         SECTION 2: ABOUT ME
+         ========================================================================= -->
+    <section class="cyber-section" id="about" aria-label="About Me Section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 01. ABOUT ME</div>
+          <h2 class="section-title">Engineering Intelligent Systems &amp; Impactful Software</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Left Column: Professional Narrative -->
+          <div class="about-narrative">
+            <p class="lead-text">
+              I am a <strong class="text-white">Computer Science Engineering student</strong> specializing in 
+              <strong class="highlight-cyan">Artificial Intelligence and Machine Learning</strong>.
+            </p>
+            
+            <p>
+              My primary technical focus centers around <strong class="highlight-violet">Python development</strong>, 
+              robust <strong class="highlight-cyan">Django web applications</strong>, and practical 
+              <strong class="text-white">machine learning workflows</strong>. I enjoy taking algorithmic concepts 
+              and architecting them into real-world, user-centric software that runs reliably.
+            </p>
+
+            <p>
+              From building multi-agent research pipelines and natural language processing resume analyzers to 
+              centralized internship management platforms and predictive regression systems, I prioritize clean 
+              modular code, sound software design principles, and measurable engineering results.
+            </p>
+
+            <div class="about-focus-cards">
+              <div class="focus-card">
+                <div class="focus-icon">🧠</div>
+                <div class="focus-details">
+                  <h3>AI &amp; Machine Learning</h3>
+                  <p>Supervised learning models, NLP text parsing, predictive regression, and multi-agent systems.</p>
+                </div>
+              </div>
+
+              <div class="focus-card">
+                <div class="focus-icon">🐍</div>
+                <div class="focus-details">
+                  <h3>Python &amp; Django Full-Stack</h3>
+                  <p>Backend architectures, RESTful design, relational databases, and dynamic web interfaces.</p>
+                </div>
+              </div>
+
+              <div class="focus-card">
+                <div class="focus-icon">⚙️</div>
+                <div class="focus-details">
+                  <h3>Practical Software Engineering</h3>
+                  <p>Version control with Git/GitHub, modular project structures, and maintainable documentation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Diagnostic Terminal -->
+          <div class="about-terminal-container" id="terminal">
+            <div class="terminal-window">
+              
+              <div class="terminal-titlebar">
+                <div class="terminal-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="terminal-title">ananya@r4x-core: ~ (bash)</span>
+                <span class="terminal-badge">LIVE</span>
+              </div>
+
+              <div class="terminal-tab-bar">
+                <button class="terminal-tab active" data-tab="profile">developer_profile.sh</button>
+                <button class="terminal-tab" data-tab="specs">system_specs.json</button>
+                <button class="terminal-tab" data-tab="cli">interactive_cli</button>
+              </div>
+
+              <div class="terminal-body" id="terminal-content">
+                <!-- Tab 1: Profile -->
+                <div class="terminal-pane active" id="pane-profile">
+                  <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat developer_profile.sh</span></div>
+                  <div class="t-output">
+                    <span class="t-key">NAME:</span> Ananya V. Hoode<br>
+                    <span class="t-key">PROGRAM:</span> B.E. Computer Science Engineering<br>
+                    <span class="t-key">SPECIALIZATION:</span> Artificial Intelligence &amp; Machine Learning<br>
+                    <span class="t-key">GITHUB:</span> github.com/ananyahoode-glitch<br>
+                    <span class="t-key">PRIMARY_LANG:</span> Python 3.x<br>
+                    <span class="t-key">FRAMEWORKS:</span> Django, Scikit-Learn, Pandas, NumPy<br>
+                    <span class="t-key">STATUS:</span> Actively building intelligent solutions &amp; open to opportunities<br>
+                    <span class="t-comment"># Click the interactive_cli tab or run commands below!</span>
+                  </div>
+                </div>
+
+                <!-- Tab 2: System Specs -->
+                <div class="terminal-pane" id="pane-specs">
+                  <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">curl -s localhost/specs.json | jq</span></div>
+                  <div class="t-output t-json">
+{
+  <span class="j-key">"developer"</span>: <span class="j-str">"Ananya V. Hoode"</span>,
+  <span class="j-key">"role"</span>: <span class="j-str">"CSE (AI &amp; ML) Student"</span>,
+  <span class="j-key">"verified_repositories"</span>: 6,
+  <span class="j-key">"focus_areas"</span>: [
+    <span class="j-str">"Artificial Intelligence"</span>,
+    <span class="j-str">"Machine Learning Models"</span>,
+    <span class="j-str">"Django Full-Stack Systems"</span>
+  ],
+  <span class="j-key">"r4x_companion_engine"</span>: <span class="j-str">"v2.4 Online"</span>
+}
+                  </div>
+                </div>
+
+                <!-- Tab 3: Interactive CLI -->
+                <div class="terminal-pane" id="pane-cli">
+                  <div class="t-line"><span class="t-prompt">$</span> <span class="t-comment">Type a command or click a quick button:</span></div>
+                  <div class="cli-command-chips">
+                    <button class="cli-chip" data-cmd="skills">skills</button>
+                    <button class="cli-chip" data-cmd="projects">projects</button>
+                    <button class="cli-chip" data-cmd="contact">contact</button>
+                    <button class="cli-chip" data-cmd="r4x --say-hi">r4x --say-hi</button>
+                    <button class="cli-chip" data-cmd="clear">clear</button>
+                  </div>
+                  <div id="cli-history"></div>
+                  <div class="cli-input-line">
+                    <span class="t-prompt">ananya@r4x:~$</span>
+                    <input type="text" id="terminal-cli-input" class="terminal-input" placeholder="Type help, skills, projects..." autocomplete="off" spellcheck="false">
+                  </div>
+                </div>
+              </div>
+
+              <div class="terminal-footer">
+                <span>R4X SHELL READY</span>
+                <span>UTF-8 // UNIX</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: PROJECT SHOWCASE (6 VERIFIED REPOSITORIES)
+         ========================================================================= -->
+    <section class="cyber-section" id="projects" aria-label="Projects Showcase Section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 02. PROJECT SHOWCASE</div>
+          <h2 class="section-title">Verified Open-Source &amp; Applied AI Projects</h2>
+          <p class="section-subtitle">
+            Inspected and verified repositories from GitHub. Filter by technology or view all 6 projects below.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filters" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            All Projects <span class="filter-count">(6)</span>
+          </button>
+          <button class="filter-btn" data-filter="aiml" role="tab" aria-selected="false">
+            AI / ML <span class="filter-count">(4)</span>
+          </button>
+          <button class="filter-btn" data-filter="python" role="tab" aria-selected="false">
+            Python <span class="filter-count">(5)</span>
+          </button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">
+            Full Stack <span class="filter-count">(1)</span>
+          </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- PROJECT 1: Smart-Internship-Portal -->
+          <article class="project-card" data-category="fullstack python" data-project-id="1">
+            <div class="project-card-inner">
+              <div class="project-media">
+                <img src="assets/project-images/smart-internship-portal.svg" alt="Smart Internship Portal UI illustration" loading="lazy" class="project-img">
+                <div class="project-media-overlay">
+                  <span class="media-category-tag">FULL STACK · DJANGO</span>
+                  <a href="https://github.com/ananyahoode-glitch/Smart-Internship-Portal" target="_blank" rel="noopener noreferrer" class="media-view-btn" aria-label="View Smart Internship Portal on GitHub">
+                    <span>Inspect Code</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="repo-badge"><span class="badge-dot"></span> GitHub Repo</span>
+                  <span class="project-category-text">Full Stack</span>
+                </div>
+
+                <h3 class="project-title">
+                  <a href="https://github.com/ananyahoode-glitch/Smart-Internship-Portal" target="_blank" rel="noopener noreferrer">
+                    Smart-Internship-Portal
+                  </a>
+                </h3>
+
+                <p class="project-description">
+                  A centralized web application designed to streamline internship applications, management, tracking, and student-recruiter workflows with structured role permissions.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">SQLite</span>
+                </div>
+
+                <div class="project-footer">
+                  <a href="https://github.com/ananyahoode-glitch/Smart-Internship-Portal" target="_blank" rel="noopener noreferrer" class="btn-github-link">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: matchwise-ai-resume-analyzer -->
+          <article class="project-card" data-category="aiml python" data-project-id="2">
+            <div class="project-card-inner">
+              <div class="project-media">
+                <img src="assets/project-images/matchwise-ai-resume-analyzer.svg" alt="MatchWise AI Resume Analyzer illustration" loading="lazy" class="project-img">
+                <div class="project-media-overlay">
+                  <span class="media-category-tag">AI · NLP MATCHING</span>
+                  <a href="https://github.com/ananyahoode-glitch/matchwise-ai-resume-analyzer" target="_blank" rel="noopener noreferrer" class="media-view-btn" aria-label="View MatchWise AI Resume Analyzer on GitHub">
+                    <span>Inspect Code</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="repo-badge"><span class="badge-dot"></span> GitHub Repo</span>
+                  <span class="project-category-text">AI / ML</span>
+                </div>
+
+                <h3 class="project-title">
+                  <a href="https://github.com/ananyahoode-glitch/matchwise-ai-resume-analyzer" target="_blank" rel="noopener noreferrer">
+                    matchwise-ai-resume-analyzer
+                  </a>
+                </h3>
+
+                <p class="project-description">
+                  An intelligent resume parsing and job description matching system designed to extract key skills, assess candidate alignment, and compute ATS compatibility metrics using NLP.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">NLP</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">Text Processing</span>
+                </div>
+
+                <div class="project-footer">
+                  <a href="https://github.com/ananyahoode-glitch/matchwise-ai-resume-analyzer" target="_blank" rel="noopener noreferrer" class="btn-github-link">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: multi-agent-research-assistant -->
+          <article class="project-card" data-category="aiml python" data-project-id="3">
+            <div class="project-card-inner">
+              <div class="project-media">
+                <img src="assets/project-images/multi-agent-research-assistant.svg" alt="Multi-Agent Research Assistant diagram" loading="lazy" class="project-img">
+                <div class="project-media-overlay">
+                  <span class="media-category-tag">AI · MULTI-AGENT</span>
+                  <a href="https://github.com/ananyahoode-glitch/multi-agent-research-assistant" target="_blank" rel="noopener noreferrer" class="media-view-btn" aria-label="View Multi-Agent Research Assistant on GitHub">
+                    <span>Inspect Code</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="repo-badge"><span class="badge-dot"></span> GitHub Repo</span>
+                  <span class="project-category-text">AI / ML</span>
+                </div>
+
+                <h3 class="project-title">
+                  <a href="https://github.com/ananyahoode-glitch/multi-agent-research-assistant" target="_blank" rel="noopener noreferrer">
+                    multi-agent-research-assistant
+                  </a>
+                </h3>
+
+                <p class="project-description">
+                  A multi-agent autonomous framework coordinating collaborative AI agents (search, analysis, synthesis) to research complex inquiries and produce structured reports.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Multi-Agent</span>
+                  <span class="tech-tag">Artificial Intelligence</span>
+                  <span class="tech-tag">LLM Orchestration</span>
+                </div>
+
+                <div class="project-footer">
+                  <a href="https://github.com/ananyahoode-glitch/multi-agent-research-assistant" target="_blank" rel="noopener noreferrer" class="btn-github-link">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Iris-flower-classification -->
+          <article class="project-card" data-category="aiml python" data-project-id="4">
+            <div class="project-card-inner">
+              <div class="project-media">
+                <img src="assets/project-images/iris-flower-classification.svg" alt="Iris Flower Classification scatter plot" loading="lazy" class="project-img">
+                <div class="project-media-overlay">
+                  <span class="media-category-tag">ML · CLASSIFICATION</span>
+                  <a href="https://github.com/ananyahoode-glitch/Iris-flower-classification" target="_blank" rel="noopener noreferrer" class="media-view-btn" aria-label="View Iris flower classification on GitHub">
+                    <span>Inspect Code</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="repo-badge"><span class="badge-dot"></span> GitHub Repo</span>
+                  <span class="project-category-text">AI / ML</span>
+                </div>
+
+                <h3 class="project-title">
+                  <a href="https://github.com/ananyahoode-glitch/Iris-flower-classification" target="_blank" rel="noopener noreferrer">
+                    Iris-flower-classification
+                  </a>
+                </h3>
+
+                <p class="project-description">
+                  Supervised machine learning classification pipeline categorizing Iris flower species (Setosa, Versicolor, Virginica) based on sepal and petal dimensional features.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Scikit-Learn</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">NumPy</span>
+                </div>
+
+                <div class="project-footer">
+                  <a href="https://github.com/ananyahoode-glitch/Iris-flower-classification" target="_blank" rel="noopener noreferrer" class="btn-github-link">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: House-price-predictor -->
+          <article class="project-card" data-category="aiml python" data-project-id="5">
+            <div class="project-card-inner">
+              <div class="project-media">
+                <img src="assets/project-images/house-price-predictor.svg" alt="House Price Predictor regression curves" loading="lazy" class="project-img">
+                <div class="project-media-overlay">
+                  <span class="media-category-tag">ML · REGRESSION</span>
+                  <a href="https://github.com/ananyahoode-glitch/House-price-predictor" target="_blank" rel="noopener noreferrer" class="media-view-btn" aria-label="View House price predictor on GitHub">
+                    <span>Inspect Code</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="repo-badge"><span class="badge-dot"></span> GitHub Repo</span>
+                  <span class="project-category-text">AI / ML</span>
+                </div>
+
+                <h3 class="project-title">
+                  <a href="https://github.com/ananyahoode-glitch/House-price-predictor" target="_blank" rel="noopener noreferrer">
+                    House-price-predictor
+                  </a>
+                </h3>
+
+                <p class="project-description">
+                  Predictive regression model estimating residential real estate values by analyzing structural features, square footage, and property attributes with data preprocessing pipelines.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Scikit-Learn</span>
+                  <span class="tech-tag">Regression</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">NumPy</span>
+                </div>
+
+                <div class="project-footer">
+                  <a href="https://github.com/ananyahoode-glitch/House-price-predictor" target="_blank" rel="noopener noreferrer" class="btn-github-link">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: S4AJIET_AIML_ANANYA_17 -->
+          <article class="project-card" data-category="aiml python" data-project-id="6">
+            <div class="project-card-inner">
+              <div class="project-media">
+                <img src="assets/project-images/s4ajiet-aiml.svg" alt="AJIET AIML Lab Coursework illustration" loading="lazy" class="project-img">
+                <div class="project-media-overlay">
+                  <span class="media-category-tag">ACADEMIC · LAB WORKBENCH</span>
+                  <a href="https://github.com/ananyahoode-glitch/S4AJIET_AIML_ANANYA_17" target="_blank" rel="noopener noreferrer" class="media-view-btn" aria-label="View S4AJIET AIML on GitHub">
+                    <span>Inspect Code</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="repo-badge"><span class="badge-dot"></span> GitHub Repo</span>
+                  <span class="project-category-text">AI / ML Labs</span>
+                </div>
+
+                <h3 class="project-title">
+                  <a href="https://github.com/ananyahoode-glitch/S4AJIET_AIML_ANANYA_17" target="_blank" rel="noopener noreferrer">
+                    S4AJIET_AIML_ANANYA_17
+                  </a>
+                </h3>
+
+                <p class="project-description">
+                  Academic laboratory repository featuring Semester 4 Artificial Intelligence &amp; Machine Learning practical implementations, core search algorithms, and computational problem-solving.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Algorithms</span>
+                  <span class="tech-tag">AI Labs</span>
+                  <span class="tech-tag">Machine Learning</span>
+                </div>
+
+                <div class="project-footer">
+                  <a href="https://github.com/ananyahoode-glitch/S4AJIET_AIML_ANANYA_17" target="_blank" rel="noopener noreferrer" class="btn-github-link">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: TECHNOLOGY STACK & SKILLS
+         ========================================================================= -->
+    <section class="cyber-section" id="skills" aria-label="Technology Stack Section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 03. TECHNICAL CAPABILITIES</div>
+          <h2 class="section-title">Verified Technologies &amp; Tooling</h2>
+          <p class="section-subtitle">
+            Core programming languages, frameworks, and tools verified through active codebase implementations.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-categories-grid">
+          
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">⚡</span>
+              <h3>Core Languages</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-level">Primary Language</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript (ES6+)</span>
+                  <span class="skill-level">Frontend Interactivity</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 82%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML5 &amp; CSS3</span>
+                  <span class="skill-level">Semantic &amp; Responsive</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 2: Frameworks & Web -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">🌐</span>
+              <h3>Web &amp; Full-Stack</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Django</span>
+                  <span class="skill-level">Full-Stack Web Framework</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">RESTful Concepts</span>
+                  <span class="skill-level">API Architecture</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 84%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">SQLite &amp; Relational DBs</span>
+                  <span class="skill-level">Data Modeling</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 3: AI & Machine Learning -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">🤖</span>
+              <h3>AI &amp; Machine Learning</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Scikit-Learn</span>
+                  <span class="skill-level">Supervised Algorithms</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Pandas &amp; NumPy</span>
+                  <span class="skill-level">Data Preprocessing &amp; Tensors</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 86%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Multi-Agent Systems &amp; NLP</span>
+                  <span class="skill-level">Intelligent Workflows</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 84%;"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 4: Tools & Version Control -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">🛠️</span>
+              <h3>Dev Tools &amp; Workflow</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Git &amp; GitHub</span>
+                  <span class="skill-level">Version Control &amp; CI</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">VS Code</span>
+                  <span class="skill-level">Primary IDE</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">GitHub Pages &amp; Static Sites</span>
+                  <span class="skill-level">Deployment &amp; Hosting</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: CONTACT & CONNECT
+         ========================================================================= -->
+    <section class="cyber-section" id="contact" aria-label="Contact Section">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">// 04. GET IN TOUCH</div>
+          <h2 class="section-title">Let's Connect and Build Together</h2>
+          <p class="section-subtitle max-w-2xl">
+            "Have an idea worth building? Let's connect and create something meaningful."
+          </p>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <div class="contact-card-wrapper">
+          <div class="contact-glass-card">
+            
+            <div class="contact-header-content">
+              <div class="contact-avatar">
+                <span class="avatar-robot-icon">🤖</span>
+                <span class="avatar-status-ring"></span>
+              </div>
+              <h3 class="contact-name">Ananya V. Hoode</h3>
+              <p class="contact-title">Computer Science Engineering Student (AI &amp; ML)</p>
+            </div>
+
+            <!-- Direct Verified Contact Links (No fake form!) -->
+            <div class="contact-methods">
+              
+              <!-- GitHub Channel -->
+              <a href="https://github.com/ananyahoode-glitch" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+                <div class="method-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">GitHub Profile</span>
+                  <span class="method-val">github.com/ananyahoode-glitch</span>
+                </div>
+                <div class="method-arrow">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </div>
+              </a>
+
+              <!-- Direct Mailto Action -->
+              <a href="mailto:ananyahoode@gmail.com?subject=Opportunity%20Inquiry%20via%20Portfolio" class="contact-method-item">
+                <div class="method-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <span class="method-val">ananyahoode@gmail.com</span>
+                </div>
+                <div class="method-arrow">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+
+            </div>
+
+            <!-- Email Copy Helper Button -->
+            <div class="email-copy-bar">
+              <span class="email-display-text" id="email-address">ananyahoode@gmail.com</span>
+              <button id="btn-copy-email" class="btn btn-sm btn-outline-cyan">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span id="copy-btn-label">Copy Email</span>
+              </button>
+            </div>
+
+            <div class="contact-note">
+              <p>Verified profile &amp; repository assets hosted via GitHub Pages.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
-  <footer class="container footer"><span>© <span id="year">2026</span> Ananya V. Hoode</span><span>Built with HTML, CSS &amp; JavaScript · <a href="#home">Back to top ↑</a></span></footer>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      
+      <!-- Top Brand Row -->
+      <div class="footer-brand-row">
+        <div class="footer-brand">
+          <span class="brand-text">ANANYA<span class="brand-accent">.AI</span></span>
+          <span class="footer-tagline">// R4X BOT-INSPIRED DEVELOPER PORTFOLIO</span>
+        </div>
+
+        <div class="footer-links-group">
+          <a href="https://github.com/ananyahoode-glitch" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+          <span class="footer-bullet">•</span>
+          <a href="#hero" class="footer-link">Portfolio</a>
+          <span class="footer-bullet">•</span>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Bottom Status & Copyright Row -->
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          Designed and developed by <strong class="text-white">Ananya V. Hoode</strong>.
+        </p>
+
+        <div class="footer-engine-status">
+          <span class="engine-pulse-light"></span>
+          <span class="engine-label">R4X BOT ENGINE: v2.4 • SYSTEM OPTIMAL</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Sound Synth / Interactive Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
