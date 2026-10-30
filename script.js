@@ -2,13 +2,13 @@
  * R4X BOT-INSPIRED DEVELOPER PORTFOLIO — INTERACTIVE ENGINE
  * Owner: Ananya V. Hoode (ananyahoode-glitch)
  * Features: Cursor Eye Tracking, 3D Head Tilt, Reactive HUD,
- * Web Audio Synthesizer, Project Filtering, Interactive Terminal
+ * Robotic Text-to-Speech Voice, Web Audio Synthesizer, Project Filtering, Interactive Terminal
  */
 
 (function () {
   'use strict';
 
-  // --- 1. Sound Synthesizer (Web Audio API) ---
+  // --- 1. Sound Synthesizer & Speech Engine ---
   let audioCtx = null;
   let audioEnabled = true;
 
@@ -24,7 +24,7 @@
     }
   }
 
-  // Futuristic synth blip / chime generator
+  // Futuristic synth sound generator
   function playFuturisticSound(type = 'blip') {
     if (!audioEnabled) return;
     try {
@@ -117,7 +117,96 @@
   // Check reduced motion preference
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // --- 3. Audio Toggle Handling ---
+  // --- 3. Robotic Voice & Mouth Waveform Animation ---
+  let talkingInterval = null;
+
+  function startMouthTalking() {
+    if (talkingInterval || !robotMouthCurve) return;
+    let tick = 0;
+    talkingInterval = setInterval(() => {
+      tick++;
+      // Animated mouth curve simulating speech syllables
+      const depths = [18, 6, 22, 4, 16, 8, 20, 2];
+      const depth = depths[tick % depths.length];
+      robotMouthCurve.setAttribute('d', `M-22 0 Q0 ${depth} 22 0`);
+      if (robotReactorCore) {
+        robotReactorCore.style.opacity = tick % 2 === 0 ? '1' : '0.65';
+      }
+    }, 100);
+  }
+
+  function stopMouthTalking() {
+    if (talkingInterval) {
+      clearInterval(talkingInterval);
+      talkingInterval = null;
+    }
+    if (robotMouthCurve) {
+      robotMouthCurve.setAttribute('d', 'M-22 0 Q0 12 22 0');
+    }
+    if (robotReactorCore) {
+      robotReactorCore.style.opacity = '1';
+    }
+  }
+
+  // Pre-load browser voices
+  let availableVoices = [];
+  function populateVoices() {
+    if ('speechSynthesis' in window) {
+      availableVoices = window.speechSynthesis.getVoices();
+    }
+  }
+  populateVoices();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.onvoiceschanged = populateVoices;
+  }
+
+  // Speak aloud with realistic robotic cadence
+  function speakVoice(text) {
+    if (!audioEnabled || !('speechSynthesis' in window)) return;
+    try {
+      window.speechSynthesis.cancel();
+
+      // Clean emojis and symbols for natural vocal speech
+      const cleanText = text
+        .replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '')
+        .replace(/[#*_`]/g, '')
+        .trim();
+
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.pitch = 1.15; // Slightly robotic pitch
+      utterance.rate = 1.05;  // Crisp cyber tempo
+
+      // Pick an English voice
+      if (availableVoices.length === 0) {
+        availableVoices = window.speechSynthesis.getVoices();
+      }
+      if (availableVoices && availableVoices.length > 0) {
+        const preferred = availableVoices.find(v => 
+          v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Zira') || v.name.includes('David'))
+        ) || availableVoices.find(v => v.lang.startsWith('en')) || availableVoices[0];
+        
+        if (preferred) utterance.voice = preferred;
+      }
+
+      utterance.onstart = () => {
+        startMouthTalking();
+      };
+
+      utterance.onend = () => {
+        stopMouthTalking();
+      };
+
+      utterance.onerror = () => {
+        stopMouthTalking();
+      };
+
+      window.speechSynthesis.speak(utterance);
+    } catch (err) {
+      stopMouthTalking();
+    }
+  }
+
+  // --- 4. Audio Toggle Handling ---
   if (audioToggleBtn) {
     audioToggleBtn.addEventListener('click', () => {
       audioEnabled = !audioEnabled;
@@ -125,14 +214,19 @@
         audioOnSvg.classList.remove('hidden');
         audioOffSvg.classList.add('hidden');
         playFuturisticSound('blip');
+        speakVoice("Voice and sound effects activated.");
       } else {
         audioOnSvg.classList.add('hidden');
         audioOffSvg.classList.remove('hidden');
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          stopMouthTalking();
+        }
       }
     });
   }
 
-  // --- 4. R4X Robot Cursor & Touch Tracking ---
+  // --- 5. R4X Robot Cursor & Touch Tracking ---
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
   let currentPupilX = 0;
@@ -199,7 +293,7 @@
 
   requestAnimationFrame(renderRobotTracking);
 
-  // --- 5. R4X Natural Eye Blinking System ---
+  // --- 6. R4X Natural Eye Blinking System ---
   let isBlinking = false;
   function triggerRobotBlink() {
     if (isBlinking || !robotLeftPupil || !robotRightPupil) return;
@@ -229,12 +323,12 @@
     }
   }, 4500);
 
-  // --- 6. R4X Dialogue & Reaction System ---
+  // --- 7. R4X Dialogue & Reaction System ---
   const robotPhrases = [
     "Exploring Ananya's verified repositories? Check out MatchWise and the Multi-Agent Assistant!",
-    "Ananya specializes in Artificial Intelligence and Machine Learning with Python & Django.",
-    "Did you know? All 6 showcased projects run on verified GitHub codebases!",
-    "Systems optimal! Looking for an AI/ML developer? Connect with Ananya anytime.",
+    "Ananya specializes in Artificial Intelligence and Machine Learning with Python and Django.",
+    "Did you know? All six showcased projects run on verified GitHub codebases!",
+    "Systems optimal! Looking for an AI and Machine Learning developer? Connect with Ananya anytime.",
     "Bzzzt! Neural networks, NLP algorithms, and clean architecture are online!"
   ];
 
@@ -254,13 +348,8 @@
       speechTextEl.style.opacity = '1';
     }, 120);
 
-    // Dynamic mouth reaction
-    if (robotMouthCurve) {
-      robotMouthCurve.setAttribute('d', 'M-22 0 Q0 16 22 0');
-      setTimeout(() => {
-        robotMouthCurve.setAttribute('d', 'M-22 0 Q0 12 22 0');
-      }, 800);
-    }
+    // Speak aloud with voice synthesis!
+    speakVoice(text);
   }
 
   // Robot click reaction
@@ -295,13 +384,13 @@
       playFuturisticSound('blip');
       const action = chip.getAttribute('data-action');
       if (action === 'hello') {
-        speak("Hello! Welcome to Ananya V. Hoode's portfolio. She is an AI & Machine Learning student passionate about building intelligent software!", "FRIENDLY");
+        speak("Hello! Welcome to Ananya V. Hoode's portfolio. She is an AI and Machine Learning student passionate about building intelligent software!", "FRIENDLY");
       } else if (action === 'about') {
-        speak("Ananya is a Computer Science Engineering student specializing in AI & ML. She loves Python, Django, and machine learning models!", "INFORMATIVE");
+        speak("Ananya is a Computer Science Engineering student specializing in AI and Machine Learning. She loves Python, Django, and machine learning models!", "INFORMATIVE");
       } else if (action === 'project') {
         speak("Check out MatchWise AI Resume Analyzer and the Multi-Agent Research Assistant below in the project showcase!", "RECOMMENDING");
       } else if (action === 'scan') {
-        speak("Diagnostics complete: 6 verified GitHub repositories active, 100% systems nominal, ready to collaborate!", "DIAGNOSTIC");
+        speak("Diagnostics complete: six verified GitHub repositories active, 100 percent systems nominal, ready to collaborate!", "DIAGNOSTIC");
       }
     });
   });
@@ -311,16 +400,16 @@
     btnSayHello.addEventListener('click', () => {
       playFuturisticSound('chime');
       triggerRobotBlink();
-      speak("Greetings from R4X! Glad you're here. Scroll down to discover Ananya's code repositories and technical skills!", "GREETING");
+      speak("Greetings from R4X! Glad you are here. Scroll down to discover Ananya's code repositories and technical skills!", "GREETING");
     });
   }
 
   // Change Mood Button
   const moods = [
     { name: 'OPTIMISTIC', color: '#55E6D1', phrase: "Status: Ready to learn, build, and innovate with state-of-the-art AI!" },
-    { name: 'ANALYTICAL', color: '#60A5FA', phrase: "Analyzing data structures, gradient descent, and supervised ML models..." },
-    { name: 'CYBERPUNK', color: '#A78BFA', phrase: "Matrix calibrated. Electric violet & cyber cyan protocol activated." },
-    { name: 'TURBO', color: '#F43F5E', phrase: "Turbo mode engaged! High-efficiency Python & Django backend processing." }
+    { name: 'ANALYTICAL', color: '#60A5FA', phrase: "Analyzing data structures, gradient descent, and supervised machine learning models." },
+    { name: 'CYBERPUNK', color: '#A78BFA', phrase: "Matrix calibrated. Electric violet and cyber cyan protocol activated." },
+    { name: 'TURBO', color: '#F43F5E', phrase: "Turbo mode engaged! High-efficiency Python and Django backend processing." }
   ];
   let currentMoodIdx = 0;
 
@@ -336,7 +425,7 @@
     });
   }
 
-  // --- 7. Project Category Filtering ---
+  // --- 8. Project Category Filtering ---
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       playFuturisticSound('blip');
@@ -362,7 +451,7 @@
     });
   });
 
-  // --- 8. Interactive Terminal Window ---
+  // --- 9. Interactive Terminal Window ---
   // Tab Switching
   terminalTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -450,7 +539,7 @@
     });
   });
 
-  // --- 9. Navigation & Header Scroll State ---
+  // --- 10. Navigation & Header Scroll State ---
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
@@ -496,7 +585,7 @@
     });
   }
 
-  // --- 10. Mobile Drawer Menu ---
+  // --- 11. Mobile Drawer Menu ---
   if (mobileToggle && mobileDrawer && mobileClose) {
     mobileToggle.addEventListener('click', () => {
       playFuturisticSound('click');
@@ -529,7 +618,7 @@
     });
   }
 
-  // --- 11. Copy Email Helper ---
+  // --- 12. Copy Email Helper ---
   if (btnCopyEmail && copyBtnLabel && emailAddress) {
     btnCopyEmail.addEventListener('click', () => {
       playFuturisticSound('chime');
@@ -546,13 +635,12 @@
           btnCopyEmail.style.color = '';
         }, 2500);
       }).catch(() => {
-        // Fallback for browsers with strict clipboard restrictions
         copyBtnLabel.textContent = 'Email Ready';
       });
     });
   }
 
-  // --- 12. Smooth Scroll for all internal hash links ---
+  // --- 13. Smooth Scroll for all internal hash links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -569,7 +657,7 @@
 
   // Log friendly system init message
   console.log(
-    '%c[R4X BOT ENGINE]%c System Initialized :: Portfolio of Ananya V. Hoode (ananyahoode-glitch)',
+    '%c[R4X BOT ENGINE]%c Voice & Synthesis System Online :: Portfolio of Ananya V. Hoode',
     'background: #1E1B4B; color: #55E6D1; font-weight: bold; padding: 4px 8px; border-radius: 4px;',
     'color: #A78BFA; font-weight: 500;'
   );
